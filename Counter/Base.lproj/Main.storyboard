@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -17,31 +17,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="arrow.clockwise.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ah5-zc-5Ol">
-                                <rect key="frame" x="172" y="339" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemGray2Color"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRC-UH-Xo2" userLabel="resetButton">
-                                <rect key="frame" x="172" y="338" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain"/>
-                                <connections>
-                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FLk-du-nsq"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4b-fL-6tr" userLabel="plusButtonView">
-                                <rect key="frame" x="288" y="338" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4b-fL-6tr" userLabel="plusButtonView">
+                                <rect key="frame" x="291" y="276" width="70" height="70"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="plus.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kdg-B8-LBT">
-                                        <rect key="frame" x="0.0" y="1" width="70" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="plus.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kdg-B8-LBT">
+                                        <rect key="frame" x="0.0" y="1" width="70" height="67.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="HUh-S2-Jz8"/>
+                                            <constraint firstAttribute="width" constant="70" id="rNM-mp-6u9"/>
+                                        </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8O4-Fb-CAa" userLabel="plusButton">
-                                        <rect key="frame" x="0.0" y="1" width="70" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8O4-Fb-CAa" userLabel="plusButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="8Am-4C-XWb"/>
+                                            <constraint firstAttribute="height" constant="70" id="hD0-cS-All"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
                                         <connections>
@@ -50,51 +41,117 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="CDp-jr-gZn"/>
+                                    <constraint firstItem="8O4-Fb-CAa" firstAttribute="centerX" secondItem="s4b-fL-6tr" secondAttribute="centerX" id="Cfa-SM-WwK"/>
+                                    <constraint firstAttribute="height" constant="70" id="H4D-QH-GMn" userLabel="height =&gt; 70"/>
+                                    <constraint firstItem="kdg-B8-LBT" firstAttribute="centerX" secondItem="s4b-fL-6tr" secondAttribute="centerX" id="LCT-Yh-cqy"/>
+                                    <constraint firstItem="8O4-Fb-CAa" firstAttribute="centerY" secondItem="s4b-fL-6tr" secondAttribute="centerY" id="nQ4-ip-8X2"/>
+                                    <constraint firstItem="kdg-B8-LBT" firstAttribute="centerY" secondItem="s4b-fL-6tr" secondAttribute="centerY" id="ymV-KU-Qjp"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VhC-rs-zCB" userLabel="minusButtonView">
-                                <rect key="frame" x="50" y="338" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VhC-rs-zCB" userLabel="minusButtonView">
+                                <rect key="frame" x="52" y="273" width="70" height="70"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g11-Za-5Mu" userLabel="minusButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g11-Za-5Mu" userLabel="minusButton">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="j2j-T2-fpf"/>
+                                            <constraint firstAttribute="height" constant="70" id="nDd-C7-hqH"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
                                         <connections>
                                             <action selector="minusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ukM-99-E23"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="minus.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zlh-re-swP">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="minus.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zlh-re-swP">
                                         <rect key="frame" x="0.0" y="1" width="70" height="67.5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="H9U-hB-fuo"/>
+                                            <constraint firstAttribute="width" constant="70" id="YdG-Kf-kON"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="zlh-re-swP" firstAttribute="centerX" secondItem="VhC-rs-zCB" secondAttribute="centerX" id="4Ht-aP-Rxs"/>
+                                    <constraint firstItem="zlh-re-swP" firstAttribute="centerY" secondItem="VhC-rs-zCB" secondAttribute="centerY" id="6Za-ib-5Bi"/>
+                                    <constraint firstItem="g11-Za-5Mu" firstAttribute="centerX" secondItem="VhC-rs-zCB" secondAttribute="centerX" id="AwJ-9g-QVO"/>
+                                    <constraint firstAttribute="height" constant="70" id="SRH-vR-0rW"/>
+                                    <constraint firstAttribute="width" constant="70" id="Z0K-cb-gwf"/>
+                                    <constraint firstItem="g11-Za-5Mu" firstAttribute="centerY" secondItem="VhC-rs-zCB" secondAttribute="centerY" id="ogG-BA-i1x"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcd-S3-Tzz">
                                 <rect key="frame" x="57" y="118" width="300" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="J33-eg-w3H"/>
-                                    <constraint firstAttribute="width" constant="300" id="t9w-cX-IXK"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="t9w-cX-IXK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="85"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uf1-8Y-ALt">
-                                <rect key="frame" x="57" y="472" width="301" height="204"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="View for Log" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uf1-8Y-ALt">
+                                <rect key="frame" x="32" y="468" width="350" height="220"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="3Xz-Rn-Bvl"/>
+                                    <constraint firstAttribute="height" constant="220" id="bxd-Gd-Q9Q"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJZ-l4-xqc" userLabel="resetButtonView">
+                                <rect key="frame" x="172" y="273" width="70" height="70"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="arrow.clockwise.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ah5-zc-5Ol">
+                                        <rect key="frame" x="0.0" y="1" width="70" height="67.5"/>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="jDa-HJ-H5O"/>
+                                            <constraint firstAttribute="height" constant="70" id="uXo-A4-era"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRC-UH-Xo2" userLabel="resetButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="3qm-P1-SZt"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="7HH-7d-kqV"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FLk-du-nsq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="5kl-2a-bE0"/>
+                                    <constraint firstAttribute="height" constant="70" id="H42-Qw-r5d"/>
+                                    <constraint firstItem="ah5-zc-5Ol" firstAttribute="centerY" secondItem="gJZ-l4-xqc" secondAttribute="centerY" id="NQn-gE-AhA"/>
+                                    <constraint firstItem="sRC-UH-Xo2" firstAttribute="centerX" secondItem="gJZ-l4-xqc" secondAttribute="centerX" id="Sfg-pa-XVj"/>
+                                    <constraint firstItem="sRC-UH-Xo2" firstAttribute="centerY" secondItem="gJZ-l4-xqc" secondAttribute="centerY" id="Y71-Jx-qZW"/>
+                                    <constraint firstItem="ah5-zc-5Ol" firstAttribute="centerX" secondItem="gJZ-l4-xqc" secondAttribute="centerX" id="YNb-TU-ZhQ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="s4b-fL-6tr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="119" id="4MV-cN-UCU" userLabel="plusButtonView.centerX = centerX + 120"/>
+                            <constraint firstItem="gJZ-l4-xqc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-140" id="Anq-K3-QZO"/>
+                            <constraint firstItem="VhC-rs-zCB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-120" id="BLR-Ox-zRt"/>
+                            <constraint firstItem="gJZ-l4-xqc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bsb-6u-9Hp"/>
+                            <constraint firstItem="s4b-fL-6tr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-137" id="HfG-bq-kAb" userLabel="plusButtonView.centerY = centerY - 140"/>
+                            <constraint firstItem="Uf1-8Y-ALt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="130" id="RaY-KS-I4a"/>
                             <constraint firstItem="hcd-S3-Tzz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wbm-QI-e0N"/>
+                            <constraint firstItem="VhC-rs-zCB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-140" id="pT5-Bb-847"/>
+                            <constraint firstItem="Uf1-8Y-ALt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wFx-Mb-F0R"/>
                             <constraint firstItem="hcd-S3-Tzz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-280" id="yor-SI-jpZ"/>
                         </constraints>
                     </view>
@@ -126,7 +183,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
